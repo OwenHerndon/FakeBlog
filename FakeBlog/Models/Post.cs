@@ -11,8 +11,18 @@ namespace FakeBlog.Models
         [Key]
         public int PostId { get; set; }
 
+        [Required]
+        public string Title { get; set; }
+
         public string Contents { get; set; }
 
+        public DateTime DateCreated { get; set; } //required by default
+
+        public DateTime PublishTime { get; set; }
+
+        public bool isDraft { get; set; }
+
+        public bool Edited { get; set; }
         //many to many with Blogusers
     }
 }

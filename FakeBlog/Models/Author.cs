@@ -21,16 +21,18 @@ namespace FakeBlog.Models
         [MaxLength(60)]
         public string FullName { get; set; }
 
-        public Blog AuthorsBlog {get; set;}
-        
+        //public Blog AuthorsBlog {get; set;}
+
+        //relationship to blog, one to one, which has a one to many relationship to post
+
+        //relationship to draft, one to one to post
+
+        //relationship to bloguser
+
         //public ApplicationUser BaseUser { get; set; } //1 to 1 relationship
 
         //public List<Draft> Drafts { get; set; } //1 to many (boards) relationship
 
         //public List<Post> Post { get; set; }
-
-        //relationship to blog, one to one, which has a one to many relationship to post
-
-        //relationship to draft, one to one to post
     }
 }
