@@ -13,7 +13,7 @@ namespace FakeBlog.Models
 
         public string Title { get; set; }
 
-        public BlogUsers Author { get; set; }
+        public ApplicationUser Author { get; set; }
 
         public List<Post> Posts { get; set; }
     }

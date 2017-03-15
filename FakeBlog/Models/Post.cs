@@ -22,7 +22,8 @@ namespace FakeBlog.Models
 
         public bool isDraft { get; set; }
 
-        public bool Edited { get; set; }
-        //many to many with Blogusers
+        public bool isEdited { get; set; }
+
+        public ApplicationUser Author { get; set; }
     }
 }
