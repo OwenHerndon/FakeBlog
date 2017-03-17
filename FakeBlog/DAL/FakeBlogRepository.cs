@@ -8,6 +8,20 @@ namespace FakeBlog.DAL
 {
     public class FakeBlogRepository : IFakeBlogRepo
     {
+
+        public FakeBlogContext Context { get; set; }
+        //private FakeTrelloContext context; // Data member
+
+        public FakeBlogRepository()
+        {
+            Context = new FakeBlogContext();
+        }
+
+        public FakeBlogRepository(FakeBlogContext context)
+        {
+            Context = context;
+        }
+
         public void AddPost(string title, ApplicationUser author)
         {
             throw new NotImplementedException();
