@@ -10,6 +10,6 @@ namespace FakeBlog.DAL
     public class FakeBlogContext : ApplicationUser
     {
         public virtual DbSet<Blog> Blog { get; set; }
-        public virtual DbSet<Post> Postss { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
     }
 }
