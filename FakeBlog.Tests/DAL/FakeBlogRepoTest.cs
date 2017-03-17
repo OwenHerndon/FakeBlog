@@ -12,13 +12,17 @@ namespace FakeBlog.Tests.DAL
     [TestClass]
     public class FakeBlogRepoTest
     {
-      
-        public FakeBlogRepository repo { get; set; }
         public Mock<FakeBlogContext> fake_context { get; set; }
+        public FakeBlogRepository repo { get; set; }
+
+        public Mock<DbSet<Blog>> mock_blog_set { get; set; }
+        public IQueryable<Blog> query_blog { get; set; }
+        public List<Blog> fake_blog_table { get; set; }
 
         [TestInitialize]
         public void Setup()
         {
+            fake_context = new Mock<FakeBlogContext>();
             repo = new FakeBlogRepository(fake_context.Object);
         }
 
