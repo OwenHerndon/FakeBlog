@@ -50,5 +50,22 @@ namespace FakeBlog.Tests.DAL
 
             Assert.IsNotNull(repo);
         }
+
+        [TestMethod]
+        public void EnsureIHaveNotNullContext()
+        {
+            FakeBlogRepository repo = new FakeBlogRepository();
+
+            Assert.IsNotNull(repo.Context);
+        }
+
+        [TestMethod]
+        public void EnsureICanInjectContextInstanc()
+        {
+            FakeBlogContext context = new FakeBlogContext();
+            FakeBlogRepository repo = new FakeBlogRepository(context);
+
+            Assert.IsNotNull(repo.Context);
+        }
     }
 }
