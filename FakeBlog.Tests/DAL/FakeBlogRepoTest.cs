@@ -67,5 +67,11 @@ namespace FakeBlog.Tests.DAL
 
             Assert.IsNotNull(repo.Context);
         }
+
+        [TestMethod]
+        public void EnsureICanAddPost()
+        {
+
+        }
     }
 }
